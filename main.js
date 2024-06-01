@@ -43,7 +43,7 @@ gsap.to(".page-2  h1",{
         markers: true, // This is markers for get the loaction of scroller trigger
         start: "top 0%", // Start point of trigger the animation 
         end: "top -100%",  // Ent point of trigger 
-        scrub: 2, // This animation depend on scroll movement 
+        scrub: 0.3, // This animation depend on scroll movement 
         // scrub: 5, // when give number value we can smooth 
         pin: true, // this is stop a scroll and  complete a animation then continue 
     }
@@ -53,4 +53,23 @@ gsap.from(".page-3 h1",{
     duration:1,
     delay: 0.5,
     scrollTrigger: ".page-3 h1",
+})
+
+
+
+let hair = document.querySelector("#hairSvg");
+hair.addEventListener('mousemove',(element)=>{
+    let valueX = element.offsetX;
+    let valueY = element.offsetY;
+    console.log(element)
+    hair.children[0].setAttribute('d',"M 0 200 Q " + valueX + " " + valueY +  " 590 200")
+ 
+})
+
+hair.addEventListener('mouseleave',(element)=>{ 
+  
+    gsap.to("#hairSvg path", {  
+        ease: "elastic.out(1.2,0.1)",
+        attr: { d:"M 0 200 Q 295 200 590 200"}
+        });
 })
