@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: url('https://images.unsplash.com/photo-1499346030926-9a72daac6c63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
+    background-size: cover;
+}
+
+header{
+    max-width: 92%;
+    margin: auto;
+}
+
+nav{
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        font-size: 32px;
+        color: white;
+    }
+}
+
+.menu-icon,.menu-cross{
+    cursor: pointer ;
+    padding: 8px;
+    background: white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    place-content: center;
+}
+.menu-cross{
+    margin-left: auto;
+
+}
+
+.menu-wrap{
+    margin-top: 24px;
+}
+
+.main-menu{
+    background: #ffffff44;
+    backdrop-filter: blur(12px);
+    transform: translateX(100%);
+    padding: 34px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px;
+    h2{
+        margin-bottom: 18px;
+        cursor: pointer;
+    }
+}
